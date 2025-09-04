@@ -42,7 +42,21 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         {{ $aluno->matricula }}
-                                    </td>   
+                                    </td>
+                                    
+                                    <td class="px-5 py-4 whitespace-nowrap">
+                                        <a href="{{ route('alunos.edit', $aluno->id) }}"
+                                        class="text-indigo-600 hover:text-indigo-900 ar-3">Editar 
+                                        <i class="far fa-edit edit-icon"></i>
+                                        </a>
+                                        <form action="{{ route('alunos.destroy', $aluno->id) }}" method="POST"class="inline-block">
+                                            @csrf <!--Proteção contra SQLInjection-->
+                                            @method('DELETE')
+                                            <button type="submit" class="text-red-600 hover:text-red-900">Excluir
+                                                <i class="fas fa-times delete-icon"></i> 
+                                            </button>  
+                                        </form>
+                                    </td>
                                 </tr> 
                                 @endforeach
                             </tbody>
