@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('slot')
-
     <div class="py-12">
         <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -61,10 +60,13 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="mt-4">
+                            {{-- $alunos->link() coloca paginação automática --}}
+                            {{ $alunos->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection

@@ -9,7 +9,7 @@ class AlunoController extends Controller
 {
     //Pagina principal
     public function index(){
-        $alunos = Aluno::all();
+        $alunos = Aluno::paginate(10);
         return view('alunos.index', compact('alunos'));
     }
 
@@ -24,7 +24,7 @@ class AlunoController extends Controller
 
     //Edição do aluno
     public function edit(Aluno $aluno){
-        return view("aluno.edit", compact("aluno"));
+        return view("alunos.edit", compact("aluno"));
     }
     public function update(Request $request, Aluno $aluno){
         $aluno->update($request->all());

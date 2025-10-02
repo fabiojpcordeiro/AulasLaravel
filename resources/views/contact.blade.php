@@ -16,12 +16,5 @@
         <br>
     </div>
     @endforeach
-
-    <h2>Salvar contato</h2>
-    <form action="{{route('contato.salvar')}}" method="POST">
-    @csrf
-    <button type="submit">Salvar Contato</button>
-
-    </form>
 </body>
 </html>

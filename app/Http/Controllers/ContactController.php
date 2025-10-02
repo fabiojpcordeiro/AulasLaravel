@@ -16,7 +16,6 @@ class ContactController extends Controller
             $contact->telefone = decrypt($contact->telefone);
             $contact->data_nascimento = $contact->data_nascimento;
         }
-
         return view('contact', compact('contacts'));
             
     }
