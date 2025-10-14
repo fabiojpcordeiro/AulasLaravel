@@ -16,7 +16,7 @@
                         <label for="nome" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             Nome:
                         </label>
-                        <input type="text" name="nome" id="nome" class="fomr-input mt-1 block w-full"
+                        <input type="text" name="nome" id="nome" class="form-input mt-1 block w-full"
                         value="{{ $aluno->nome }}" required>
                     </div>
                     <div class="mb-4">
